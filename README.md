@@ -1,1 +1,2 @@
 # IIA-excel-file-filterer
+This is a Streamlit app that allows the user to filter an Excel file based on tags extracted from a specific column. The app reads in an Excel file and displays it to the user. The user can select one or more tags to filter the data by using a multiselect widget. When the user clicks the "Filter Dataframe" button, the app filters the data and displays the results in a table with a border.
