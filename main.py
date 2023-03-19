@@ -3,7 +3,7 @@ import pandas as pd
 
 # Define a function to filter the dataframe based on user input
 def filter_dataframe(df, choices):
-    filtered_df = df[df['Tags (Semicolon Separated)'].str.contains('|'.join(choices))]
+    filtered_df = df[df['Tags (Semicolon Separated)'].str.contains('&'.join(choices))]
     return filtered_df
 
 # Define the Streamlit app
