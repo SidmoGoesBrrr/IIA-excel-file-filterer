@@ -3,7 +3,7 @@ import pandas as pd
 
 # Define a function to filter the dataframe based on user input
 def filter_dataframe(df, choices):
-filtered_df = df[df['Tags (Semicolon Separated)'].str.contains(choices[0]) & df['Tags (Semicolon Separated)'].str.contains(choices[1])]
+    filtered_df = df[df['Tags (Semicolon Separated)'].str.contains(choices[0]) & df['Tags (Semicolon Separated)'].str.contains(choices[1])]
 
     return filtered_df
 
@@ -24,7 +24,6 @@ def main():
         # Create a set of unique tags
         unique_tags = set(all_tags)
 
-        # Print the unique tags list
         print(list(unique_tags))
         # Display the dataframe
         st.write("Original Dataframe:")
@@ -37,7 +36,6 @@ def main():
         if len(choices) != 0:
             if st.button("Filter Dataframe"):
                 filtered_df = filter_dataframe(df, choices)
-                print(choices)
                 #Display the filtered dataframe with a border
                 st.write("Filtered Dataframe:")
                 st.write(filtered_df.style.set_table_styles([{'selector': 'th',
